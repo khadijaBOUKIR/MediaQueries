@@ -4,22 +4,31 @@
 html,
 body {
   background-color: white; }
-  html .lists,
-  body .lists {
+  html header .lists,
+  body header .lists {
     display: flex;
     justify-content: flex-end; }
-    html .lists .list,
-    body .lists .list {
+    html header .lists .list,
+    body header .lists .list {
       display: flex;
       list-style-type: none;
       height: 90px;
       align-items: center;
       justify-content: center; }
-      html .lists .list:hover,
-      body .lists .list:hover {
+      html header .lists .list:hover,
+      body header .lists .list:hover {
         text-decoration: none; }
-      html .lists .list .list-item .item,
-      body .lists .list .list-item .item {
+      @media only screen and (max-width: 768px) {
+        html header .lists .list,
+        body header .lists .list {
+          margin-top: 1px; } }
+      @media only screen and (max-width: 425px) {
+        html header .lists .list,
+        body header .lists .list {
+          margin-bottom: -13px;
+          margin-top: -17px; } }
+      html header .lists .list .list-item .item,
+      body header .lists .list .list-item .item {
         font-size: 30px;
         color: black;
         margin-left: 25px;
@@ -27,44 +36,93 @@ body {
         font-weight: bold;
         border-width: 10px;
         margin-right: 50px; }
-        html .lists .list .list-item .item:hover,
-        body .lists .list .list-item .item:hover {
+        html header .lists .list .list-item .item:hover,
+        body header .lists .list .list-item .item:hover {
           color: rgba(139, 137, 137, 0.267); }
-  html .subtitle,
-  body .subtitle {
+        @media only screen and (max-width: 425px) {
+          html header .lists .list .list-item .item,
+          body header .lists .list .list-item .item {
+            font-size: 21px;
+            margin-right: 29px; } }
+  html header .subtitle,
+  body header .subtitle {
     width: 100%;
     height: 1px;
     background: #b1a8a82e;
     margin: 5px 0; }
-  html .container,
-  body .container {
+  html section .container,
+  body section .container {
     display: flex;
     flex-direction: column; }
-    html .container .img-text,
-    body .container .img-text {
-      display: flex;
-      flex-direction: row; }
-      @media only screen and (min-width: 320px) {
-        html .container .img-text,
-        body .container .img-text {
+    html section .container .title,
+    body section .container .title {
+      margin-left: 6px;
+      font-size: 80px;
+      color: lightgrey;
+      font-family: system-ui; }
+      @media only screen and (max-width: 768px) {
+        html section .container .title,
+        body section .container .title {
+          font-size: 64px;
+          color: #a3e5ff;
+          margin-left: 1px; } }
+      @media only screen and (max-width: 425px) {
+        html section .container .title,
+        body section .container .title {
+          font-size: 34px;
+          color: pink;
+          margin-left: 66px; } }
+    html section .container .img-text,
+    body section .container .img-text {
+      display: flex; }
+      @media only screen and (max-width: 425px) {
+        html section .container .img-text,
+        body section .container .img-text {
+          display: flex;
           flex-direction: column; } }
-      html .container .img-text .picture,
-      body .container .img-text .picture {
-        flex: 1; }
-        html .container .img-text .picture .picture-item,
-        body .container .img-text .picture .picture-item {
-          width: 100%;
-          height: 100%; }
-      html .container .img-text .content,
-      body .container .img-text .content {
-        flex: 1; }
-  html .title,
-  body .title {
-    margin-left: 40px;
-    font-size: 80px;
-    color: lightgrey;
-    font-family: system-ui; }
-    @media only screen and (min-width: 320px) {
-      html .title,
-      body .title {
-        font-size: 90px; } }
+      @media only screen and (max-width: 768px) {
+        html section .container .img-text,
+        body section .container .img-text {
+          display: flex; } }
+      html section .container .img-text .content,
+      body section .container .img-text .content {
+        flex: 1;
+        font-size: 31px;
+        text-align: justify;
+        margin-right: 20px;
+        margin-top: 11px; }
+        @media only screen and (max-width: 768px) {
+          html section .container .img-text .content,
+          body section .container .img-text .content {
+            text-align: justify;
+            margin-right: 9px;
+            font-size: 22px;
+            margin-top: 30px; } }
+        @media only screen and (max-width: 425px) {
+          html section .container .img-text .content,
+          body section .container .img-text .content {
+            text-align: justify;
+            font-size: 19px; } }
+      html section .container .img-text .picture,
+      body section .container .img-text .picture {
+        flex: 1;
+        margin-top: 20px;
+        margin-right: 5px; }
+        @media only screen and (max-width: 768px) {
+          html section .container .img-text .picture,
+          body section .container .img-text .picture {
+            margin-top: 34px; } }
+        @media only screen and (max-width: 425px) {
+          html section .container .img-text .picture,
+          body section .container .img-text .picture {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 33px; } }
+      html section .container .img-text .picture-item,
+      body section .container .img-text .picture-item {
+        width: 100%;
+        height: 100%; }
+        @media only screen and (max-width: 425px) {
+          html section .container .img-text .picture-item,
+          body section .container .img-text .picture-item {
+            border-radius: 33px; } }

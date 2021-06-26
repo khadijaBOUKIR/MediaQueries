@@ -5,68 +5,129 @@
 html,
 body {
     background-color: rgb(255, 255, 255);
-    .lists {
-        display: flex;
-        justify-content: flex-end;
-        .list {
+    header {
+        .lists {
             display: flex;
-            list-style-type: none;
-            height: 90px;
-            align-items: center;
-            justify-content: center;
-            &:hover {
-                text-decoration: none;
-            }
-            .list-item {
-                .item {
-                    font-size: 30px;
-                    color: black;
-                    margin-left: 25px;
+            justify-content: flex-end;
+            .list {
+                display: flex;
+                list-style-type: none;
+                height: 90px;
+                align-items: center;
+                justify-content: center;
+                &:hover {
                     text-decoration: none;
-                    font-weight: bold;
-                    border-width: 10px;
-                    margin-right: 50px;
-                    &:hover {
-                        color: rgba(139, 137, 137, 0.267);
+                }
+                @media only screen and (max-width: 768px) {
+                    margin-top: 1px;
+                }
+                @media only screen and (max-width: 425px) {
+                    margin-bottom: -13px;
+                    margin-top: -17px;
+                }
+                .list-item {
+                    .item {
+                        font-size: 30px;
+                        color: black;
+                        margin-left: 25px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        border-width: 10px;
+                        margin-right: 50px;
+                        &:hover {
+                            color: rgba(139, 137, 137, 0.267);
+                        }
+                        @media only screen and (max-width: 768px) {}
+                        @media only screen and (max-width: 425px) {
+                            font-size: 21px;
+                            margin-right: 29px;
+                        }
                     }
+                    .activation {}
                 }
             }
         }
+        .subtitle {
+            width: 100%;
+            height: 1px;
+            background: #b1a8a82e;
+            margin: 5px 0;
+        }
     }
-    .subtitle {
-        width: 100%;
-        height: 1px;
-        background: #b1a8a82e;
-        margin: 5px 0;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        .img-text {
+    section {
+        .container {
             display: flex;
-            flex-direction: row;
-            @media only screen and (min-width: 320px) {
-                flex-direction: column;
+            flex-direction: column;
+            .title {
+                margin-left: 6px;
+                font-size: 80px;
+                color: lightgrey;
+                font-family: system-ui;
+                @media only screen and (max-width: 768px) {
+                    font-size: 64px;
+                    color: #a3e5ff;
+                    margin-left: 1px;
+                }
+                @media only screen and (max-width: 425px) {
+                    font-size: 34px;
+                    color: pink;
+                    margin-left: 66px;
+                }
             }
-            .picture {
-                flex: 1;
+            .img-text {
+                display: flex;
+                @media only screen and (max-width: 425px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                @media only screen and (max-width: 768px) {
+                    display: flex;
+                }
+                .content {
+                    flex: 1;
+                    font-size: 31px;
+                    text-align: justify;
+                    margin-right: 20px;
+                    //margin-top: 26px;
+                    margin-top: 11px;
+                    @media only screen and (max-width: 768px) {
+                        text-align: justify;
+                        margin-right: 9px;
+                        font-size: 22px;
+                        margin-top: 30px;
+                    }
+                    @media only screen and (max-width: 425px) {
+                        text-align: justify;
+                        font-size: 19px;
+                    }
+                }
+                .picture {
+                    flex: 1;
+                    //height: 386px;
+                    //width: 112px;
+                    margin-top: 20px;
+                    margin-right: 5px;
+                    @media only screen and (max-width: 768px) {
+                        margin-top: 34px;
+                        //margin-bottom: 114px;
+                        //height: 362px;
+                    }
+                    @media only screen and (max-width: 425px) {
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        border-radius: 33px;
+                        //width: 300px;
+                    }
+                }
                 .picture-item {
                     width: 100%;
                     height: 100%;
+                    @media only screen and (max-width: 425px) {
+                        border-radius: 33px;
+                    }
+                    @media only screen and (max-width: 768px) {}
                 }
             }
-            .content {
-                flex: 1;
-            }
-        }
-    }
-    .title {
-        margin-left: 40px;
-        font-size: 80px;
-        color: lightgrey;
-        font-family: system-ui;
-        @media only screen and (min-width: 320px) {
-            font-size: 90px;
         }
     }
 }
